@@ -4,6 +4,7 @@ import {child, getDatabase, onValue, push, query, ref, remove, set, update} from
 
 import firebase from "./firebase";
 import { successNote } from "./tostify";
+
 export const addInfo=(info)=>{
     const db=getDatabase();
     const userRef=ref(db,"contact")
@@ -39,6 +40,7 @@ export const deleteInfo=(id)=>{
   const db=getDatabase();
     // const userRef=ref(db,'contact');
   remove(ref(db,"contact/"+id))
+  successNote("Deleted")
   }
 export const updateInfo=(info)=>{
   const db=getDatabase()

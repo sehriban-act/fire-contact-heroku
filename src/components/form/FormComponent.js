@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+
 import { Grid,Form,Segment,Button} from 'semantic-ui-react';
 
 import {options} from "../../utils/constants";

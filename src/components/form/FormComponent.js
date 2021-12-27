@@ -1,19 +1,22 @@
-import React from 'react';
-
+import React from 'react'
 import { Grid,Form,Segment,Button} from 'semantic-ui-react';
+import { options } from '../../utils/constants';
 
-import {options} from "../../utils/constants";
 const FormComponent = ({info,setInfo,handleFormSubmit}) => {
+
   const handleInputChange=(e)=>{
+    // const name=e.target.name
+    // const value=e.target.value
     const {name,value}=e.target
-  setInfo({...info,[name]:value})};
-  
+    setInfo({...info,[name]:value})
+
+  }
   const handleOptionChange=(e,values)=>{
-    const {name,value}=values;
+    const {name,value}=values
     setInfo({...info,[name]:value.toUpperCase()})
 
   }
-  
+
     return (
         <Grid textAlign="center" verticalAlign="middle">
          <Grid.Column style={{ width: 300 }}>
@@ -31,7 +34,7 @@ const FormComponent = ({info,setInfo,handleFormSubmit}) => {
             </div>
             </div>
             <h2 className="contact-header">Add Contact</h2>
-            <Form size="large" onSubmit={handleFormSubmit}>
+        <Form size="large" onSubmit={handleFormSubmit} >
           <Segment stacked>
             <Form.Input
               fluid
